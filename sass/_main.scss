@@ -1,0 +1,142 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    .main{
+        width: 100%;
+        height: 100%;
+        background: url(../img/background/soon.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        .main__wrap {
+            width: 100%;
+            padding: 6% 0px 0px 0px;
+            img {
+                width: 100%;
+                max-width: 80px;
+                margin-left: calc(50% - 40px);
+                @media (max-width: $sm) {
+                    max-width: 50px;
+                    margin-left: calc(50% - 25px);
+                }
+            }
+                h1 {
+                    width: 100%;
+                    max-width: 400px;
+                    color: $myblack;
+                    font-size: $large;
+                    margin-left: calc(50% - 200px);
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 15px 0px;
+                    @media (max-width: $sm) {
+                        margin-left: 0px;
+                        font-size: $medium;
+                        padding: 5px 0px;
+                    }
+                }
+                p {
+                    width: 100%;
+                    max-width: 600px;
+                    font-size: $small;
+                    color: $grey;
+                    margin-left: calc(50% - 300px);
+                    text-align: center;
+                    padding: 15px 0px;
+                    @media (max-width: $md) {
+                        margin-left: 0px;
+                    }
+                    @media (max-width: $md) {
+                        padding: 5px;
+                    }
+                }
+            .time {
+                width: 100%;
+                max-width: 500px;
+                margin-left: calc(50% - 250px);
+                padding: 15px 0px;
+                color: white;
+                text-transform: uppercase;
+                .days {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .hours {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .minutes {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .seconds {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                label {
+                    width: 100%;
+                    float: left;
+                    font-family: $font-roboto;
+                    font-size: $medium;
+                    text-align: center;
+                    @media (max-width: $md) {
+                        // margin-left: 0px;
+                    }
+                }
+                span {
+                    float: left;
+                    font-family: $font-sans;
+                    font-size: $small;
+                    @media (max-width: $md) {
+                        // margin-left: 0px;
+                    }
+                }
+            }
+            .email__form {
+                width: 100%;
+                max-width: 500px;
+                margin-left: calc(50% - 250px);
+                margin-top: 10%;
+                @media (max-width: $md) {
+
+                }
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border-bottom: 1px solid black;
+                    text-align: center;
+                    font-size: $normal;
+                    text-transform: capitalize;
+                    &::placeholder {
+                        color: white;
+                        line-height: 40px;
+                    }
+                }
+                button {
+                    width: 150px;
+                    height: 35px;
+                    margin-left: calc(50% - 75px);
+                    background-color: rgb(219, 59, 10);
+                    color: white;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 2px rgb(236, 231, 231);
+                }
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    @media (max-width: $md) {
+        width: 98%;
+    }
+}
