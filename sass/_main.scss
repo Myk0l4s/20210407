@@ -46,10 +46,13 @@
                     text-align: center;
                     padding: 15px 0px;
                     @media (max-width: $md) {
-                        margin-left: 0px;
+                        max-width: 450px;
+                        padding: 5px 20px;
+                        margin-left: calc(50% - 225px);
                     }
-                    @media (max-width: $md) {
-                        padding: 5px;
+                    @media (max-width: $sm) {
+                        width: 100%;
+                        margin-left: 0;
                     }
                 }
             .time {
@@ -59,26 +62,35 @@
                 padding: 15px 0px;
                 color: white;
                 text-transform: uppercase;
-                .days {
-                    width: 100%;
-                    float: left;
-                    width: calc(100% / 4);
+                @media (max-width:$md) {
+                    // margin-left: 0px;
                 }
-                .hours {
-                    width: 100%;
-                    float: left;
-                    width: calc(100% / 4);
+                @media (max-width:$sm) {
+                    margin-left: 0px;
                 }
-                .minutes {
-                    width: 100%;
-                    float: left;
-                    width: calc(100% / 4);
-                }
+                .days,
+                .hours,
+                .minutes,
                 .seconds {
                     width: 100%;
                     float: left;
                     width: calc(100% / 4);
                 }
+                // .hours {
+                //     width: 100%;
+                //     float: left;
+                //     width: calc(100% / 4);
+                // }
+                // .minutes {
+                //     width: 100%;
+                //     float: left;
+                //     width: calc(100% / 4);
+                // }
+                // .seconds {
+                //     width: 100%;
+                //     float: left;
+                //     width: calc(100% / 4);
+                // }
                 label {
                     width: 100%;
                     float: left;
@@ -86,7 +98,7 @@
                     font-size: $medium;
                     text-align: center;
                     @media (max-width: $md) {
-                        // margin-left: 0px;
+                        font-size: $medium;
                     }
                 }
                 span {
@@ -94,7 +106,7 @@
                     font-family: $font-sans;
                     font-size: $small;
                     @media (max-width: $md) {
-                        // margin-left: 0px;
+                        font-size: $tiny;
                     }
                 }
             }
@@ -102,9 +114,14 @@
                 width: 100%;
                 max-width: 500px;
                 margin-left: calc(50% - 250px);
-                margin-top: 10%;
+                margin-top: 90px;
                 @media (max-width: $md) {
-
+                 max-width: 400px;
+                 margin-left: calc(50% - 200px);
+                }
+                @media (max-width: $sm) {
+                    width: 80%;
+                    margin-left: 10%;
                 }
                 input {
                     width: 100%;
@@ -128,6 +145,117 @@
                     box-shadow: 2px 2px 2px rgb(236, 231, 231);
                 }
             }
+            .mouse {
+                margin-top: 80px;
+                width: 30px;
+                height: 50px;
+                border: 1px solid white;
+                margin-left: calc(50% - 15px);
+                border-radius: 18px;
+            }
+        }
+    }
+    .section {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $md) {
+            height: 100%;
+        }
+        .section__wrap {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 70px 0px;
+            .section__left {
+                width: 50%;
+                float: left;
+                @media (max-width: $xl) {
+                    width: 100%;
+                }
+            }
+            .section__right {
+                width: 50%;
+                float: left;
+                @media (max-width: $xl) {
+                    width: 100%;
+                }
+            }
+            .left__content,
+            .right__content {
+                width: 92%;
+                margin-left: 4%;
+                h3 {
+                    text-align: left;
+                    width: 100%;
+                    font-size: $normal;
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: $font-roboto;
+                    padding: 10px 0px;
+                }
+                p {
+                    // font-family: $font-sans;
+                    font-size: $small;
+                    line-height: 25px;
+                    padding: 10px 0px;
+                    span {
+                        color: brown;
+                    }
+                }
+                .animation {
+                    margin-top: 20px;
+                    padding: 15px 0px;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    .bar__row {
+                        width: 100%;
+                        height: 30px;
+                        margin: 1px 0px;
+                        position: relative;
+                        font-family: $font-sans;
+                        font-size: $tiny;
+                        label {
+                            width: 50%;
+                            float: left;
+                        }
+                        span {
+                            width: 50%;
+                            float: right;
+                            text-align: right;
+                        }
+                        .row__wrap {
+                            width: 100%;
+                            height: 2px;
+                           .line {
+                               position: absolute;
+                               bottom: 8px;
+                               width: 100%;
+                               height: 4px;
+                               background-color: rgb(51, 19, 139);
+                               border-radius: 10px;
+                           }
+                           .active {
+                               @extend .line;
+                               background-color: blue;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        background-color: slateblue;
+        .footer__wrap {
+            width: 100%;
+            // height: 100%;
         }
     }
 }
