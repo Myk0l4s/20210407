@@ -7,13 +7,14 @@
     <meta name="description" content="All about coming soon!">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/app.css">
     <link rel="shortcut icon" href="./img/logo/Fiksavimas.PNG" type="image/x-icon">
     <title>Coming soon!!</title>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="top">
         <main class="main">
             <div class="container">
                 <div class="main__wrap">
@@ -85,11 +86,12 @@
                         <div class="right__content">
                             <h3>have any questions?</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quia <span>cupiditate</span>cupiditate vel minus. Animi, sequi quas, autem <span>inventore</span>consequuntur inventore ex maiores quam consequatur magni dolorum labore iste deserunt eos deleniti.</p>
-                            <div class="animation">
+                            <!-- <div class="animation"> -->
                             <form action="#" method="GET">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <textarea placeholder="Message"></textarea>
+                                <input class="name" type="text" placeholder="Name">
+                                <input class="email"type="text" placeholder="Email">
+                                <textarea class="textarea" placeholder="Message"></textarea>
+                                <button type="submit">send message</button>
                             </form>
                         </div>
                     </div>
@@ -98,8 +100,31 @@
         </section>
         <footer class="footer">
             <div class="container">
-                <div class="footer_wrap">
-                    
+                <div class="footer__wrap">
+                    <div class="social">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                        <i class="fa fa-tumblr" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                    </div>
+                    <hr>
+                    <div class="logo">
+                        <img src="./img/logo/Fiksavimas.PNG" alt="logo">
+                        <label>Myk0l4s</label>
+                    </div>
+                    <div class="about">
+                        <div class="row">
+                            <p>Copyright 2021 @ <span>Myk0l4s</span> <b>|</b> All rights reserverd <b>|</b> Designed by <span>Mykolas</span></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, impedit temporibus natus sit molestiae eius nobis distinctio perferendis voluptatem ut.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <a href="#top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
                 </div>
             </div>
         </footer>
