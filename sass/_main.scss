@@ -62,9 +62,6 @@
                 padding: 15px 0px;
                 color: white;
                 text-transform: uppercase;
-                @media (max-width:$md) {
-                    // margin-left: 0px;
-                }
                 @media (max-width:$sm) {
                     margin-left: 0px;
                 }
@@ -234,12 +231,12 @@
                                bottom: 8px;
                                width: 100%;
                                height: 4px;
-                               background-color: rgb(51, 19, 139);
+                               background-color: rgb(139, 118, 196);
                                border-radius: 10px;
                            }
                            .active {
                                @extend .line;
-                               background-color: blue;
+                               background-color: rgb(4, 4, 110);
                            }
                         }
                     }

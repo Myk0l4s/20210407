@@ -383,13 +383,13 @@ h6 {
   bottom: 8px;
   width: 100%;
   height: 4px;
-  background-color: #33138b;
+  background-color: #8b76c4;
   border-radius: 10px;
 }
 
 .wrapper .section .section__wrap .left__content .animation .bar__row .row__wrap .active,
 .wrapper .section .section__wrap .right__content .animation .bar__row .row__wrap .active {
-  background-color: blue;
+  background-color: #04046e;
 }
 
 .wrapper .footer {
