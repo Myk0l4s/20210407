@@ -98,63 +98,85 @@ html {
   position: fixed;
   width: 100%;
   height: 60px;
-  padding: 15px;
   background-color: rgba(49, 49, 49, 0.644);
   z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.wrapper .header .container {
-  width: 1200px;
-  margin-left: calc(50% - 600px);
-}
-
-@media (max-width: 720px) {
-  .wrapper .header .container {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-.wrapper .header .container .header__wrap {
+.wrapper .header .header__wrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.wrapper .header .container .header__wrap .logo {
-  width: 200px;
-  font-size: 35px;
   color: white;
 }
 
-.wrapper .header .container .header__wrap .nav {
-  width: 250px;
+.wrapper .header .header__wrap .logo {
+  font-size: 23px;
+  padding-top: 17.5px;
+}
+
+.wrapper .header .header__wrap .nav {
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 720px) {
-  .wrapper .header .container .header__wrap .nav {
+  .wrapper .header .header__wrap .nav {
     display: none;
   }
 }
 
-.wrapper .header .container .header__wrap .nav a {
-  width: 80px;
-  color: white;
-  font-size: 18px;
+.wrapper .header .header__wrap .nav a {
+  color: inherit;
+  font-size: 23px;
+  padding: 17.5px 15px 0px 0px;
 }
 
-.wrapper .header .container .header__wrap .burger {
+.wrapper .header .header__wrap .nav a:last-of-type {
+  padding: 17.5px 0px 0px 0px;
+}
+
+.wrapper .header .header__wrap .burger {
   display: none;
+  width: 45px;
+  height: 53px;
+  cursor: pointer;
   color: #f7f3f3;
+  position: relative;
+  transition: .3s;
+}
+
+.wrapper .header .header__wrap .burger:hover span:nth-child(2) {
+  opacity: 0;
+}
+
+.wrapper .header .header__wrap .burger:hover span:nth-child(1) {
+  position: absolute;
+  top: 25px;
+  transform: rotate(45deg);
+  transition: .7s;
+}
+
+.wrapper .header .header__wrap .burger:hover span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: .7s;
 }
 
 @media (max-width: 720px) {
-  .wrapper .header .container .header__wrap .burger {
+  .wrapper .header .header__wrap .burger {
     display: inline-block;
   }
+}
+
+.wrapper .header .header__wrap .burger span {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+  transition: .7s;
 }
 
 .wrapper .main {
@@ -166,6 +188,7 @@ html {
   background-position: center center;
   display: flex;
   justify-content: center;
+  background-attachment: fixed;
 }
 
 .wrapper .main .main__wrap {
@@ -563,7 +586,7 @@ html {
   padding: 7px;
   color: white;
   cursor: pointer;
-  transition: .7s;
+  transition: 0.7s;
 }
 
 .wrapper .footer .footer__wrap .social .fa:hover {
@@ -668,10 +691,5 @@ html {
   max-width: 1200px;
   height: 100%;
   position: relative;
-}
-
-@media (max-width: 720px) {
-  .container {
-    width: 98%;
-  }
+  padding: 0px 15px;
 }

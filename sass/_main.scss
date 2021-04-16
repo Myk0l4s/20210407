@@ -1,480 +1,482 @@
 .wrapper {
+  width: 100%;
+  height: 100%;
+  .header {
+    position: fixed;
     width: 100%;
-    height: 100%;
-    .header {
-        position: fixed;
-        width: 100%;
-        height: 60px;
-        padding: 15px;
-        background-color: rgba(49, 49, 49, 0.644);
-        z-index: 1;
-        .container {
-            width: 1200px;
-            margin-left: calc(50% - 600px);
-            @media (max-width: $md) {
-                width: 100%;
-                margin-left: 0;
-            }
-            .header__wrap {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                .logo {
-                    width: 200px;
-                    font-size: $medium;
-                    color: white;
-
-                }
-                .nav {
-                    width: 250px;
-                    display: flex;
-                    justify-content: space-between;
-                    @media (max-width: $md) {
-                        display: none;
-                    }
-                    a {
-                        width: 80px;
-                        color: white;
-                        font-size: $small;
-                    }
-                }
-                .burger {
-                    display: none;
-                    color: rgb(247, 243, 243);
-                    @media (max-width: $md) {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-    .main{
-        width: 100%;
-        height: 100%;
-        background: url(../img/background/soon.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+    height: 60px;
+    // padding: 15px;
+    background-color: rgba(49, 49, 49, 0.644);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    .header__wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      .logo {
+        font-size: $normal;
+        padding-top: 17.5px;
+      }
+      .nav {
         display: flex;
-        justify-content: center;
-        .main__wrap {
-            width: 100%;
-            padding: 6% 0px 0px 0px;
-            @media (max-width: $md) {
-                padding: 15% 0px 0px 0px;
-            }
-            img {
-                width: 100%;
-                max-width: 80px;
-                margin-left: calc(50% - 40px);
-                @media (max-width: $sm) {
-                    max-width: 50px;
-                    margin-left: calc(50% - 25px);
-                }
-            }
-                h1 {
-                    width: 100%;
-                    max-width: 400px;
-                    color: $myblack;
-                    font-size: $large;
-                    margin-left: calc(50% - 200px);
-                    font-weight: bold;
-                    text-align: center;
-                    padding: 15px 0px;
-                    @media (max-width: $sm) {
-                        margin-left: 0px;
-                        font-size: $medium;
-                        padding: 5px 0px;
-                    }
-                }
-                p {
-                    width: 100%;
-                    max-width: 600px;
-                    font-size: $small;
-                    color: $grey;
-                    margin-left: calc(50% - 300px);
-                    text-align: center;
-                    padding: 15px 0px;
-                    @media (max-width: $md) {
-                        max-width: 450px;
-                        padding: 5px 20px;
-                        margin-left: calc(50% - 225px);
-                    }
-                    @media (max-width: $sm) {
-                        width: 100%;
-                        margin-left: 0;
-                    }
-                }
-            .time {
-                width: 100%;
-                max-width: 500px;
-                margin-left: calc(50% - 250px);
-                padding: 15px 0px;
-                color: white;
-                text-transform: uppercase;
-                @media (max-width:$sm) {
-                    margin-left: 0px;
-                }
-                .days,
-                .hours,
-                .minutes,
-                .seconds {
-                    width: 100%;
-                    float: left;
-                    width: calc(100% / 4);
-                }
-                // .hours {
-                //     width: 100%;
-                //     float: left;
-                //     width: calc(100% / 4);
-                // }
-                // .minutes {
-                //     width: 100%;
-                //     float: left;
-                //     width: calc(100% / 4);
-                // }
-                // .seconds {
-                //     width: 100%;
-                //     float: left;
-                //     width: calc(100% / 4);
-                // }
-                label {
-                    width: 100%;
-                    float: left;
-                    font-family: $font-roboto;
-                    font-size: $medium;
-                    text-align: center;
-                    @media (max-width: $md) {
-                        font-size: $medium;
-                    }
-                }
-                span {
-                    float: left;
-                    font-family: $font-sans;
-                    font-size: $small;
-                    @media (max-width: $md) {
-                        font-size: $tiny;
-                    }
-                }
-            }
-            .email__form {
-                width: 100%;
-                max-width: 500px;
-                margin-left: calc(50% - 250px);
-                margin-top: 90px;
-                @media (max-width: $md) {
-                 max-width: 400px;
-                 margin-left: calc(50% - 200px);
-                }
-                @media (max-width: $sm) {
-                    width: 80%;
-                    margin-left: 10%;
-                }
-                input {
-                    width: 100%;
-                    background-color: transparent;
-                    border-bottom: 1px solid black;
-                    text-align: center;
-                    font-size: $normal;
-                    text-transform: capitalize;
-                    &::placeholder {
-                        color: white;
-                        line-height: 40px;
-                    }
-                }
-                button {
-                    width: 150px;
-                    height: 35px;
-                    margin-left: calc(50% - 75px);
-                    background-color: rgb(219, 59, 10);
-                    color: white;
-                    margin-top: 20px;
-                    box-shadow: 2px 2px 2px rgb(236, 231, 231);
-                }
-            }
-            .mouse {
-                margin-top: 80px;
-                width: 30px;
-                height: 50px;
-                border: 1px solid white;
-                margin-left: calc(50% - 15px);
-                border-radius: 18px;
-                .wheel {
-                    display: inline-block;
-                    width: 3px;
-                    height: 15px;
-                    margin-left: calc(50% - 2px);
-                    margin-top: 8px;
-                    background-color: rgb(250, 250, 250);
-                    animation-name: wheel;
-                    animation-duration: 1s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: ease-out;
-                    // animation-direction: reverse;
-                }
-            }
-        }
-    }
-    .section {
-        width: 100%;
-        height: 500px;
-        display: flex;
-        justify-content: center;
+        justify-content: space-between;
         @media (max-width: $md) {
-            height: 900px;
+          display: none;
         }
-        .section__wrap {
+        a {
+          color: inherit;
+          font-size: $normal;
+          padding: 17.5px 15px 0px 0px;
+          &:last-of-type {
+              padding: 17.5px 0px 0px 0px;
+          }
+        }
+      }
+      .burger {
+        display: none;
+        width: 45px;
+        height: 53px;
+        cursor: pointer;
+        color: rgb(247, 243, 243);
+        position: relative;
+        transition: .3s;
+       &:hover span:nth-child(2) {
+           opacity: 0;
+       }
+       &:hover span:nth-child(1) {
+           position: absolute;
+           top: 25px;
+           transform: rotate(45deg);
+           transition: .7s;
+        }
+        &:hover span:nth-child(3) {
+            transform: rotate(-45deg);
+            transition: .7s;
+         }
+        @media (max-width: $md) {
+          display: inline-block;
+        }
+        span {
             display: inline-block;
             width: 100%;
-            height: 40px;
-            padding: 70px 0px;
-            .section__left {
-                width: 50%;
-                float: left;
-                @media (max-width: $xl) {
-                    width: 100%;
-                }
-            }
-            .section__right {
-                width: 50%;
-                float: left;
-                @media (max-width: $xl) {
-                    width: 100%;
-                }
-            }
-            .left__content,
-            .right__content {
-                width: 92%;
-                margin-left: 4%;
-                h3 {
-                    text-align: left;
-                    width: 100%;
-                    font-size: $normal;
-                    color: black;
-                    text-transform: uppercase;
-                    font-family: $font-roboto;
-                    padding: 10px 0px;
-                }
-                p {
-                    // font-family: $font-sans;
-                    font-size: $small;
-                    line-height: 25px;
-                    padding: 10px 0px;
-                    span {
-                        color: brown;
-                    }
-                }
-                form {
-                    width: 100%;
-                    margin-top: 45px;
-                    .name {
-                        width: 49%;
-                        float: left;
-                        color: grey;
-                        padding: 5px 0px;
-                        border-bottom: 1px solid grey;
-                    }
-                   
-                    .email {
-                        width: 49%;
-                        float: right;
-                        color: grey;
-                        padding: 5px 0px;
-                        border-bottom: 1px solid grey;
-                    }
-
-                    .textarea {
-                        width: 100%;
-                        color: grey;
-                        margin-top: 10px;
-                        border-bottom: 1px solid grey;
-                        resize: none;
-                        padding: 10px 0px;
-                        height: 70px;
-                    }
-                    button {
-                        margin-top: 30px;
-                        width: 150px;
-                        height: 30px;
-                        float: right;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                        color: white;
-                        background-color: $buttons;
-                        // font-family: $font-sans;
-                        font-weight: normal;
-                        box-shadow: 2px 2px 2px rgb(75, 48, 48);
-                    }
-                }
-                .animation {
-                    margin-top: 20px;
-                    padding: 15px 0px;
-                    width: 100%;
-                    height: 100%;
-                    display: inline-block;
-                    .bar__row {
-                        width: 100%;
-                        height: 30px;
-                        margin: 1px 0px;
-                        position: relative;
-                        font-family: $font-sans;
-                        font-size: $tiny;
-                        label {
-                            width: 50%;
-                            float: left;
-                        }
-                        span {
-                            width: 50%;
-                            float: right;
-                            text-align: right;
-                        }
-                        .row__wrap {
-                            width: 100%;
-                            height: 2px;
-                           .line {
-                               position: absolute;
-                               bottom: 8px;
-                               width: 100%;
-                               height: 4px;
-                               background-color: rgb(139, 118, 196);
-                               border-radius: 10px;
-                           }
-                           .active {
-                               @extend .line;
-                               background-color: rgb(4, 4, 110);
-                               animation-name: bars;
-                               animation-duration: 8s;
-                               animation-timing-function: ease-out;
-                               animation-iteration-count: infinite;
-                               cursor: pointer;
-                               &:hover {
-                                   animation-play-state: paused;
-                               }
-                           }
-                        }
-                    }
-                }
-            }
+            height: 4px;
+            background-color: white;
+            border-radius: 10px;
+            transition: .7s;
         }
+      }
     }
-    .footer {
-        display: flex;
-        justify-content: center;
+  }
+  .main {
+    width: 100%;
+    height: 100%;
+    background: url(../img/background/soon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+    .main__wrap {
+      width: 100%;
+      padding: 6% 0px 0px 0px;
+      @media (max-width: $md) {
+        padding: 15% 0px 0px 0px;
+      }
+      img {
         width: 100%;
-        height: 250px;
-        background-color: slateblue;
-        .footer__wrap {
-            width: 100%;
-            .social {
-                width: 100%;
-                height: 40px;
-                text-align: center;
-                padding: 10px 0px;
-                margin-bottom: 10px;
-                .fa {
-                    width: 30px;
-                    height: 30px;
-                    padding: 7px;
-                    color: white;
-                    cursor: pointer;
-                    transition: .7s;
-                    &:hover {
-                        border-radius: 10px;
-                        background-color: white;
-                        color: black;
-                        @media (max-width: $md) {
-                            pointer-events: none;
-                        }
-                    }
-                }
-            }
-            hr {
-                width: 100%;
-                height: 2px;
-                border-bottom: 1px solid rgb(255, 255, 255);
-                margin-bottom: 20px;
-            }
-            .logo {
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                img {
-                width: 50px;
-                height: 50px;
-                }
-                label {
-                    font-size: $medium;
-                    color: white;
-                    padding-top: 13px;
-                    font-family: $font-roboto;
-                }
-            }
-            .about {
-                width: 100%;
-                margin-top: 10px;
-                p {
-                    text-align: center;
-                    color: rgb(13, 27, 14);
-                    padding-top: 7px 0px;
-                    font-size: $small;
-                    @media (max-width: $md) {
-                        font-size: $tiny;
-                        padding: 6px 0px;
-                    }
-                    span {
-                        color: white;
-                    }
-                }
-            }
+        max-width: 80px;
+        margin-left: calc(50% - 40px);
+        @media (max-width: $sm) {
+          max-width: 50px;
+          margin-left: calc(50% - 25px);
         }
-        .arrow {
-            position: absolute;
-            top: -25px;
-            right: 0px;
-            width: 50px;
-            height: 50px;
-            border-radius: 25px;
-            background-color: $buttons;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a {
-                font-size: $medium;
-                color: white;
-            }
+      }
+      h1 {
+        width: 100%;
+        max-width: 400px;
+        color: $myblack;
+        font-size: $large;
+        margin-left: calc(50% - 200px);
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 0px;
+        @media (max-width: $sm) {
+          margin-left: 0px;
+          font-size: $medium;
+          padding: 5px 0px;
         }
+      }
+      p {
+        width: 100%;
+        max-width: 600px;
+        font-size: $small;
+        color: $grey;
+        margin-left: calc(50% - 300px);
+        text-align: center;
+        padding: 15px 0px;
+        @media (max-width: $md) {
+          max-width: 450px;
+          padding: 5px 20px;
+          margin-left: calc(50% - 225px);
+        }
+        @media (max-width: $sm) {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      .time {
+        width: 100%;
+        max-width: 500px;
+        margin-left: calc(50% - 250px);
+        padding: 15px 0px;
+        color: white;
+        text-transform: uppercase;
+        @media (max-width: $sm) {
+          margin-left: 0px;
+        }
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          width: 100%;
+          float: left;
+          width: calc(100% / 4);
+        }
+        label {
+          width: 100%;
+          float: left;
+          font-family: $font-roboto;
+          font-size: $medium;
+          text-align: center;
+          @media (max-width: $md) {
+            font-size: $medium;
+          }
+        }
+        span {
+          float: left;
+          font-family: $font-sans;
+          font-size: $small;
+          @media (max-width: $md) {
+            font-size: $tiny;
+          }
+        }
+      }
+      .email__form {
+        width: 100%;
+        max-width: 500px;
+        margin-left: calc(50% - 250px);
+        margin-top: 90px;
+        @media (max-width: $md) {
+          max-width: 400px;
+          margin-left: calc(50% - 200px);
+        }
+        @media (max-width: $sm) {
+          width: 80%;
+          margin-left: 10%;
+        }
+        input {
+          width: 100%;
+          background-color: transparent;
+          border-bottom: 1px solid black;
+          text-align: center;
+          font-size: $normal;
+          text-transform: capitalize;
+          &::placeholder {
+            color: white;
+            line-height: 40px;
+          }
+        }
+        button {
+          width: 150px;
+          height: 35px;
+          margin-left: calc(50% - 75px);
+          background-color: rgb(219, 59, 10);
+          color: white;
+          margin-top: 20px;
+          box-shadow: 2px 2px 2px rgb(236, 231, 231);
+        }
+      }
+      .mouse {
+        margin-top: 80px;
+        width: 30px;
+        height: 50px;
+        border: 1px solid white;
+        margin-left: calc(50% - 15px);
+        border-radius: 18px;
+        .wheel {
+          display: inline-block;
+          width: 3px;
+          height: 15px;
+          margin-left: calc(50% - 2px);
+          margin-top: 8px;
+          background-color: rgb(250, 250, 250);
+          animation-name: wheel;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-out;
+          // animation-direction: reverse;
+        }
+      }
     }
+  }
+  .section {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    @media (max-width: $md) {
+      height: 900px;
+    }
+    .section__wrap {
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      padding: 70px 0px;
+      .section__left {
+        width: 50%;
+        float: left;
+        @media (max-width: $xl) {
+          width: 100%;
+        }
+      }
+      .section__right {
+        width: 50%;
+        float: left;
+        @media (max-width: $xl) {
+          width: 100%;
+        }
+      }
+      .left__content,
+      .right__content {
+        width: 92%;
+        margin-left: 4%;
+        h3 {
+          text-align: left;
+          width: 100%;
+          font-size: $normal;
+          color: black;
+          text-transform: uppercase;
+          font-family: $font-roboto;
+          padding: 10px 0px;
+        }
+        p {
+          // font-family: $font-sans;
+          font-size: $small;
+          line-height: 25px;
+          padding: 10px 0px;
+          span {
+            color: brown;
+          }
+        }
+        form {
+          width: 100%;
+          margin-top: 45px;
+          .name {
+            width: 49%;
+            float: left;
+            color: grey;
+            padding: 5px 0px;
+            border-bottom: 1px solid grey;
+          }
+
+          .email {
+            width: 49%;
+            float: right;
+            color: grey;
+            padding: 5px 0px;
+            border-bottom: 1px solid grey;
+          }
+
+          .textarea {
+            width: 100%;
+            color: grey;
+            margin-top: 10px;
+            border-bottom: 1px solid grey;
+            resize: none;
+            padding: 10px 0px;
+            height: 70px;
+          }
+          button {
+            margin-top: 30px;
+            width: 150px;
+            height: 30px;
+            float: right;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: white;
+            background-color: $buttons;
+            // font-family: $font-sans;
+            font-weight: normal;
+            box-shadow: 2px 2px 2px rgb(75, 48, 48);
+          }
+        }
+        .animation {
+          margin-top: 20px;
+          padding: 15px 0px;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          .bar__row {
+            width: 100%;
+            height: 30px;
+            margin: 1px 0px;
+            position: relative;
+            font-family: $font-sans;
+            font-size: $tiny;
+            label {
+              width: 50%;
+              float: left;
+            }
+            span {
+              width: 50%;
+              float: right;
+              text-align: right;
+            }
+            .row__wrap {
+              width: 100%;
+              height: 2px;
+              .line {
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                height: 4px;
+                background-color: rgb(139, 118, 196);
+                border-radius: 10px;
+              }
+              .active {
+                @extend .line;
+                background-color: rgb(4, 4, 110);
+                animation-name: bars;
+                animation-duration: 8s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+                cursor: pointer;
+                &:hover {
+                  animation-play-state: paused;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    background-color: slateblue;
+    .footer__wrap {
+      width: 100%;
+      .social {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        .fa {
+          width: 30px;
+          height: 30px;
+          padding: 7px;
+          color: white;
+          cursor: pointer;
+          transition: 0.7s;
+          &:hover {
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            @media (max-width: $md) {
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      hr {
+        width: 100%;
+        height: 2px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        margin-bottom: 20px;
+      }
+      .logo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        label {
+          font-size: $medium;
+          color: white;
+          padding-top: 13px;
+          font-family: $font-roboto;
+        }
+      }
+      .about {
+        width: 100%;
+        margin-top: 10px;
+        p {
+          text-align: center;
+          color: rgb(13, 27, 14);
+          padding-top: 7px 0px;
+          font-size: $small;
+          @media (max-width: $md) {
+            font-size: $tiny;
+            padding: 6px 0px;
+          }
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+    .arrow {
+      position: absolute;
+      top: -25px;
+      right: 0px;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: $buttons;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        font-size: $medium;
+        color: white;
+      }
+    }
+  }
 }
 
 @keyframes bars {
-    0% {
-        width: 0%;
-        background-color: red;
-    }
-    100% { 
-        background-color: green;
-    }
+  0% {
+    width: 0%;
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
 }
-
 
 @keyframes wheel {
-    0% {
-        margin-top: 8px;
-    }
-    100% {
-        margin-top: 15px;
-    }
+  0% {
+    margin-top: 8px;
+  }
+  100% {
+    margin-top: 15px;
+  }
 }
 
-
-
 .container {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    position: relative;
-    @media (max-width: $md) {
-        width: 98%;
-    }
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  position: relative;
+  padding: 0px 15px;
 }
