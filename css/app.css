@@ -124,7 +124,15 @@ html {
 
 @media (max-width: 720px) {
   .wrapper .header .header__wrap .nav {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: rgba(109, 138, 175, 0.849);
+    height: 1000px;
+    transform: translateY(-100%);
   }
 }
 
@@ -136,6 +144,24 @@ html {
 
 .wrapper .header .header__wrap .nav a:last-of-type {
   padding: 17.5px 0px 0px 0px;
+}
+
+@media (max-width: 720px) {
+  .wrapper .header .header__wrap .nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  .wrapper .header .header__wrap .nav a:first-of-type {
+    margin-top: 150px;
+  }
+}
+
+.wrapper .header .header__wrap .on {
+  transform: translateY(0%);
+  transition: 2s;
 }
 
 .wrapper .header .header__wrap .burger {
